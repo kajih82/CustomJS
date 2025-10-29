@@ -4,3 +4,5 @@ const myButton = document.getElementById('btnSubmit');
 
 // Hide the button
 myButton.style.display = 'none';
+
+console.log('Did it run?');
