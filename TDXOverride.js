@@ -1,8 +1,10 @@
-console.log('Hello World');
-// Get a reference to the button by its ID
-const myButton = document.getElementById('btnSubmit');
-
-// Hide the button
-myButton.style.display = 'none';
-
-console.log('Did it run?');
+console.log('Start!');
+const style = document.createElement('style');
+style.innerHTML = `
+#btnSubmit[value="HideMe3000"] {
+    display: none !important;
+}
+  }
+`;
+document.head.appendChild(style);
+console.log('End!');
