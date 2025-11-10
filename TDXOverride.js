@@ -7,11 +7,11 @@ style.innerHTML = `
     display: none !important;
 }
 
-/* HIDE SIDEBAR FROM CATALOGUE AND SET MAIN CONTENT TO 100% */
+/* HIDE SIDEBAR FROM CATALOGUE AND SET MAIN CONTENT TO 100% 
 #servicesContent .row.gutter-top #divSidebar {
     display: none;
 }
-@media (min-width: 992px) { .col-md-8 { width: 100%; }
+@media (min-width: 992px) { .col-md-8 { width: 100%; } */
 
 `;
 document.head.appendChild(style);
