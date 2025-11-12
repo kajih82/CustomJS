@@ -28,8 +28,7 @@ style.innerHTML += `
   color: #005C8B;
   text-align: center;
   margin-bottom: 2rem;
-	margin-TOP: 2rem;
-  font-size: 2rem;
+  margin-top: 2rem;
   font-weight: 600;
 }
 
