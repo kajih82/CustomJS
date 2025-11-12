@@ -105,6 +105,7 @@ style.innerHTML += `
 .dds-description img {
   width: 200px;                /* Adjust image size */
   height: 226px;
+}
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
