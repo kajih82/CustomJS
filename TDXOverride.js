@@ -3,16 +3,109 @@ const currentUrl = window.location.href;
 // Always create a <style> element
 const style = document.createElement('style');
 
-// Base CSS (applies globally)
+//  ========== Base CSS (applies globally)  ==========
 style.innerHTML = `
-/* HIDE FORM BUTTONS IF NAMED HIDEME3000 */
+/* ========== HIDE FORM BUTTONS IF NAMED HIDEME3000 ========== */
 #btnSubmit[value="HideMe3000"] {
   display: none !important;
 }
 `;
 
-// Conditional CSS: Only applies on this exact ServiceDet page
-if (currentUrl === "https://ccc.teamdynamix.com/SBTDClient/136/Portal/Requests/ServiceDet?ID=4605") {
+// ========== DDS Service Catalogue Styles ==========
+style.innerHTML += `
+.dds-container {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #F8FAFC;
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Title */
+.dds-title {
+  color: #005C8B;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Grid Layout */
+.dds-services .dds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Cards */
+.dds-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.dds-card:hover {
+  transform: translateY(-6px);
+  border-color: #00B5E2;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.dds-card h3 {
+  color: #005C8B;
+  margin-top: 0;
+}
+
+.dds-card p {
+  color: #475569;
+}
+
+.dds-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #00B5E2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dds-card a:hover {
+  color: #0077B6;
+}
+
+/* Description Box */
+.dds-description {
+  background-color: #ffffff;
+  border-left: 6px solid;
+  border-image: linear-gradient(180deg, #00B5E2, #005C8B) 1;
+  padding: 20px 24px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.dds-description p {
+  margin: 0;
+  color: #1E293B;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .dds-container {
+    padding: 20px 15px;
+  }
+}
+`;
+
+// ========== Conditional: Only applies on DDS Service Catalogue Page ==========
+// Hide sidebar and stretch main content to full width
+if (currentUrl.includes("ServiceDet?ID=4605")) {
   style.innerHTML += `
   /* HIDE SIDEBAR FROM CATALOGUE AND SET MAIN CONTENT TO 100% */
   #servicesContent .row.gutter-top #divSidebar {
