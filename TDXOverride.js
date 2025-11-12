@@ -13,8 +13,6 @@ style.innerHTML = `
 
 // ========== DDS Service Catalogue Styles ==========
 style.innerHTML += `
-/* ===== Scoped DDS Service Catalogue (with normalized font sizing) ===== */
-
 .dds-container {
   font-family: 'Segoe UI', Roboto, sans-serif;
   background-color: #F8FAFC;
@@ -30,6 +28,7 @@ style.innerHTML += `
   color: #005C8B;
   text-align: center;
   margin-bottom: 2rem;
+	margin-TOP: 2rem;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -55,6 +54,11 @@ style.innerHTML += `
   transform: translateY(-6px);
   border-color: #00B5E2;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.dds-title h2 {
+  color: #005C8B;
+  margin-top: 0;
 }
 
 .dds-card h3 {
@@ -91,8 +95,7 @@ style.innerHTML += `
 
 .dds-description p {
   margin: 0;
-  color: #1E293B;
-  font-size: 1rem;
+  color: #475569;  
   line-height: 1.6;
 }
 
@@ -102,7 +105,6 @@ style.innerHTML += `
     padding: 20px 15px;
   }
 }
-
 `;
 
 // ========== Conditional: Only applies on DDS Service Catalogue Page ==========
