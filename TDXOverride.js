@@ -28,7 +28,7 @@ style.innerHTML += `
   color: #005C8B;
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+	margin-top: 2rem;
   font-weight: 600;
 }
 
@@ -87,16 +87,24 @@ style.innerHTML += `
   background-color: #ffffff;
   border-left: 6px solid;
   border-image: linear-gradient(180deg, #00B5E2, #005C8B) 1;
-  padding: 40PX;
+  padding: 20px;
   margin: 0px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;              /* Enables side-by-side layout */
+  justify-content: space-between; /* Push text left, image right */
+  align-items: center;        /* Vertically center both */
 }
 
 .dds-description p {
   margin: 0;
   color: #475569;  
   line-height: 1.6;
+	margin-left: 20px;         /* Adds small gap before image */
 }
+
+.dds-description img {
+  width: 200px;                /* Adjust image size */
+  height: 226px;
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
