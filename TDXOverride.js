@@ -25,3 +25,5 @@ if (currentUrl === "https://ccc.teamdynamix.com/SBTDClient/136/Portal/Requests/S
   }
   `;
 }
+
+document.head.appendChild(style);
