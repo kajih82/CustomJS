@@ -17,7 +17,7 @@ style.innerHTML += `
   font-family: 'Segoe UI', Roboto, sans-serif;
   background-color: #F8FAFC;
   border-radius: 20px;
-  padding: 40px 30px;
+  padding: 40px; /* Equal padding all around */
   max-width: 1200px;
   margin: 40px auto;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
@@ -62,6 +62,8 @@ style.innerHTML += `
 
 .dds-card p {
   color: #475569;
+  font-size: 1.05rem; /* Matches description box */
+  line-height: 1.7;
 }
 
 .dds-card a {
@@ -83,16 +85,17 @@ style.innerHTML += `
   border-left: 6px solid;
   border-image: linear-gradient(180deg, #00B5E2, #005C8B) 1;
   padding: 20px 24px;
-  margin-top: 40px;
+  margin-top: 0;            /* Removed extra top margin */
+  margin-bottom: 40px;      /* Consistent bottom spacing */
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .dds-description p {
   margin: 0;
-  color: #1E293B;
-  font-size: 1rem;
-  line-height: 1.6;
+  color: #334155;           /* Slightly darker for better readability */
+  font-size: 1.05rem;       /* Matches cards */
+  line-height: 1.7;
 }
 
 /* Responsive tweaks */
